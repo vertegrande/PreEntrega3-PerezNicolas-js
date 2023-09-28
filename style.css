@@ -185,6 +185,13 @@ footer {
   -webkit-filter: grayscale(100%);
 }
 
+.newsletter {
+  padding: 44px;
+  background: #8c7352;
+  color: #fff;
+  margin-top: 30px;
+}
+
 .copyright {
   font-size: 11px;
   font-weight: 500;
