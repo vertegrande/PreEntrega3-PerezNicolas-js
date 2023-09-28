@@ -20,8 +20,7 @@ $tipografia-general:"Poppins", verdana, sans-serif;
     color: $color-texto;
 }
   
-  /* HEADER */
-
+/* HEADER */
 header {
   @include color-gris-tienda;
   
@@ -239,10 +238,9 @@ footer {
 	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	        animation: heartbeat 1.5s ease-in-out infinite both;
 }
-
 /**
  * ----------------------------------------
- * ANIMACION: latido del corazón
+ * ANIMACION: latido del corazón whatsapp
  * ----------------------------------------
  */
 @-webkit-keyframes heartbeat {
@@ -313,8 +311,6 @@ footer {
             animation-timing-function: ease-out;
   }
 }
-
-
 /* BARRA INFO ECOMMERCE - PAGOS - ENVIOS - TIEMPOS */
 .medios-pago-lineal {
     @include color-gris-tienda;
