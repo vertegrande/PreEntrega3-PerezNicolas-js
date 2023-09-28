@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+$color-primario: #ececec;
+$color-secundario: #8c7352;
+$color-terciario: #cba263;
+$color-texto: #666;
+$tipografia-general:"Poppins", verdana, sans-serif;
+
+@mixin color-gris-tienda {
+    background-color: #ececec;
+    color: #333333;
+  }
+@mixin color-caja-texto {
+    background-color: #8c7352;
+    color: #ffffff;
+  }
+  body {
+    font-family: $tipografia-general;
+    color: $color-texto;
+
+  }
+  
+  
+header {
+  @include color-gris-tienda;
+  
+}
+
+.bg-body-tertiary {
+  background: $color-primario !important;
+}
+
+.nav-link, .nav-link li a {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.navbar-nav li:nth-child(3n) a {
+  color: #fff !important;
+  background: $color-secundario;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+header .carrito {
+  list-style: none;
+  padding: 25px 5px 10px 17px;
+}
+
+header .carrito a {
+  color: $color-secundario;
+}
+
+.card {
+  border: 0;
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.precios_producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 15px;
+  height: 2.9375rem;
+}
+
+.precio_nuevo {
+  font-size: 1rem;
+  font-family: $tipografia-general;
+  line-height: 1.1875rem;
+  font-weight: 700;
+  width: 100%;
+  color:$color-terciario;
+  text-align: center;
+}
+
+.precio_viejo {
+  text-decoration: line-through;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.precio_unitario {
+  font-size: 0.75rem;
+  font-family: $tipografia-general;
+  line-height: 0.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+.precio_unitario strong {
+     font-weight: 700;
+     font-family: $tipografia-general;
+     line-height: 0;
+}
+
+.single-producto .precio_nuevo,
+.single-producto .precio_viejo,
+.single-producto .precio_unitario {
+     text-align: left;
+}
+
+.single-producto p {
+    font-size: 13px;
+    margin-top: 30px;
+    color: $color-secundario;
+}
+.single-producto .btn {
+    font-size: 14px;
+    padding: 15px;
+    font-weight: 700;
+}
+.single-producto .btn-warning {
+    @include color-caja-texto;
+    border: 0;
+}
+.single-producto .precio_nuevo {
+    font-size: 25px;
+    line-height:35px;
+    margin-top: 20px;
+   
+  }
+ 
+.btn {
+    border-radius: 0;
+    text-align: center;
+    font-size: 13px;
+} 
+.costo-envio {
+ @include color-gris-tienda;
+}
+.costo-envio .form-label {
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 5px;
+   }
+.form-control {
+     border-radius: 0;
+     font-size: 11px;
+     padding: 10px;
+}
+span.oferta {
+    position: absolute;
+    top: 11px;
+    right: 3px;
+    height: 65px;
+    text-align: center;
+    width: 65px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    display: inline-block;
+    text-transform: uppercase;
+    font-style: italic;
+    background: #3d3c54;
+    color: #FFFFFF;
+    padding: 18px 0px 0px 1px;
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 18px;
+    margin-right: 2px;
+    font-family: "Poppins", sans-serif;
+}
+.newsletter {
+    @include color-marron-texto;  
+}
+footer {
+    @include color-gris-tienda;  
+    font-size: 10px;
+    padding: 20px;
+}
+
+.footer_logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  list-style: none;
+}
+
+.footer_logos li {
+  padding: 10px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.copyright {
+  font-size: 11px;
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */
