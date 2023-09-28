@@ -1,31 +1,36 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+/* Base mixins, variables proyecto */
 body {
   font-family: "Poppins", verdana, sans-serif;
   color: #666;
 }
 
+/* HEADER */
 header {
   background-color: #ececec;
   color: #333333;
 }
 
-.bg-body-tertiary {
+.bg-body {
   background: #ececec !important;
+}
+
+.navbar-nav {
+  display: flex;
 }
 
 .nav-link, .nav-link li a {
   color: #000;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
 .navbar-nav li:nth-child(3n) a {
   color: #fff !important;
   background: #8c7352;
-}
-
-.navbar-nav {
-  display: flex;
+  padding: 8px 15px;
 }
 
 header .carrito {
@@ -37,6 +42,14 @@ header .carrito a {
   color: #8c7352;
 }
 
+header .form-control {
+  border-radius: 0;
+  font-size: 12px;
+  min-width: 400px;
+  padding: 10px;
+}
+
+/* PRODUCTOS EN HOME */
 .card {
   border: 0;
   padding: 10px;
@@ -50,6 +63,7 @@ header .carrito a {
   text-align: center;
 }
 
+/* PRECIOS PRODUCTOS */
 .precios_producto {
   display: flex;
   flex-direction: column;
@@ -65,7 +79,7 @@ header .carrito a {
   line-height: 1.1875rem;
   font-weight: 700;
   width: 100%;
-  color: #cba263;
+  color: #cc8832;
   text-align: center;
 }
 
@@ -89,59 +103,7 @@ header .carrito a {
   line-height: 0;
 }
 
-.single-producto .precio_nuevo,
-.single-producto .precio_viejo,
-.single-producto .precio_unitario {
-  text-align: left;
-}
-
-.single-producto p {
-  font-size: 13px;
-  margin-top: 30px;
-  color: #8c7352;
-}
-
-.single-producto .btn {
-  font-size: 14px;
-  padding: 15px;
-  font-weight: 700;
-}
-
-.single-producto .btn-warning {
-  background-color: #8c7352;
-  color: #ffffff;
-  border: 0;
-}
-
-.single-producto .precio_nuevo {
-  font-size: 25px;
-  line-height: 35px;
-  margin-top: 20px;
-}
-
-.btn {
-  border-radius: 0;
-  text-align: center;
-  font-size: 13px;
-}
-
-.costo-envio {
-  background-color: #ececec;
-  color: #333333;
-}
-
-.costo-envio .form-label {
-  font-size: 12px;
-  font-weight: 500;
-  padding-left: 5px;
-}
-
-.form-control {
-  border-radius: 0;
-  font-size: 11px;
-  padding: 10px;
-}
-
+/* FLOTADOR OFERTA EN PRODUCTOS*/
 span.oferta {
   position: absolute;
   top: 11px;
@@ -164,6 +126,64 @@ span.oferta {
   font-family: "Poppins", sans-serif;
 }
 
+/* PRECIO PRODUCTO EN SINGLE */
+.single-producto .precio_nuevo,
+.single-producto .precio_viejo,
+.single-producto .precio_unitario {
+  text-align: left;
+}
+
+.single-producto p {
+  font-size: 13px;
+  margin-top: 30px;
+  color: #8c7352;
+}
+
+/* BOTONES PRODUCTOS  EN SINGLE*/
+.single-producto .btn {
+  font-size: 14px;
+  padding: 15px;
+  font-weight: 700;
+}
+
+.single-producto .btn-warning {
+  background-color: #8c7352;
+  color: #ffffff;
+  border: 0;
+}
+
+.single-producto .precio_nuevo {
+  font-size: 25px;
+  line-height: 35px;
+  margin-top: 20px;
+}
+
+/* REGLA GENERAL BOTON */
+.btn {
+  border-radius: 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* CAJA COSTO DE ENVIO */
+.costo-envio {
+  background-color: #ececec;
+  color: #333333;
+}
+
+.costo-envio .form-label {
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+.costo-envio .form-control {
+  border-radius: 0;
+  font-size: 11px;
+  padding: 10px;
+}
+
+/* PIE DE PAGINA */
 footer {
   background-color: #ececec;
   color: #333333;
@@ -185,6 +205,12 @@ footer {
   -webkit-filter: grayscale(100%);
 }
 
+.copyright {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* NEWSLETTER */
 .newsletter {
   padding: 44px;
   background: #8c7352;
@@ -192,7 +218,134 @@ footer {
   margin-top: 30px;
 }
 
-.copyright {
-  font-size: 11px;
-  font-weight: 500;
-} /*# sourceMappingURL=style.css.map */
+/* BOTON whatsapp */
+.fixed-whatsapp {
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1030;
+}
+
+.btn-whatsapp i {
+  width: 67px;
+  height: 67px;
+  padding: 10px 8px;
+  color: white;
+  text-align: center;
+  font-size: 44px;
+  vertical-align: middle;
+}
+
+.btn-whatsapp {
+  z-index: 999;
+  width: 67px;
+  height: 67px;
+  background-color: #cc8832;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  border: 0;
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+/**
+ * ----------------------------------------
+ * ANIMACION: latido del corazón
+ * ----------------------------------------
+ */
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+/* BARRA INFO ECOMMERCE - PAGOS - ENVIOS - TIEMPOS */
+.medios-pago-lineal {
+  background-color: #ececec;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.medios-pago-lineal .row {
+  padding: 15px 0;
+}
+
+.medios-pago-lineal span p:first-child {
+  color: #666;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 13px;
+  padding: 9px 0 2px 0;
+  margin: 0;
+  font-weight: 600;
+}
+
+.medios-pago-lineal span p:last-child {
+  color: #cc8832;
+  font-size: 8px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+}
+
+.medios-pago-lineal .row > a {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  color: #666;
+}
+
+.medios-pago-lineal .row > a:nth-child(2) {
+  border-right: 1px solid #cc8832;
+  border-left: 1px solid #cc8832;
+}
+
+@media (min-width: 992px) {
+  .medios-pago-lineal .row span {
+    display: inline-block;
+    text-align: left;
+    margin-left: 5px;
+  }
+  .medios-pago-lineal .row > a {
+    padding-left: 15px;
+    padding-right: 15px;
+    list-style: none;
+  }
+  .medios-pago-lineal span p:first-child {
+    font-size: 14px;
+    padding: 0;
+  }
+  .medios-pago-lineal span p:last-child {
+    font-size: 11px;
+  }
+  .medios-pago-lineal .row {
+    padding: 25px 0;
+  }
+  .medios-pago-lineal .row span:last-child {
+    position: relative;
+    top: 8px;
+    margin-left: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

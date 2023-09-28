@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+/* Base mixins, variables proyecto */
+
 $color-primario: #ececec;
 $color-secundario: #8c7352;
-$color-terciario: #cba263;
+$color-terciario: #cc8832;
 $color-texto: #666;
 $tipografia-general:"Poppins", verdana, sans-serif;
 
@@ -16,32 +18,31 @@ $tipografia-general:"Poppins", verdana, sans-serif;
   body {
     font-family: $tipografia-general;
     color: $color-texto;
+}
+  
+  /* HEADER */
 
-  }
-  
-  
 header {
   @include color-gris-tienda;
   
 }
-
-.bg-body-tertiary {
+.bg-body {
   background: $color-primario !important;
 }
-
+.navbar-nav {
+    display: flex;
+  }  
 .nav-link, .nav-link li a {
   color: #000;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
 .navbar-nav li:nth-child(3n) a {
   color: #fff !important;
   background: $color-secundario;
-}
-
-.navbar-nav {
-  display: flex;
+  padding: 8px 15px;
 }
 
 header .carrito {
@@ -52,7 +53,13 @@ header .carrito {
 header .carrito a {
   color: $color-secundario;
 }
-
+header .form-control {
+    border-radius: 0;
+    font-size: 12px;
+    min-width: 400px;
+    padding: 10px;
+}
+/* PRODUCTOS EN HOME */
 .card {
   border: 0;
   padding: 10px;
@@ -65,7 +72,7 @@ header .carrito a {
   padding: 10px;
   text-align: center;
 }
-
+/* PRECIOS PRODUCTOS */
 .precios_producto {
   display: flex;
   flex-direction: column;
@@ -74,7 +81,6 @@ header .carrito a {
   margin-bottom: 15px;
   height: 2.9375rem;
 }
-
 .precio_nuevo {
   font-size: 1rem;
   font-family: $tipografia-general;
@@ -104,51 +110,7 @@ header .carrito a {
      font-family: $tipografia-general;
      line-height: 0;
 }
-
-.single-producto .precio_nuevo,
-.single-producto .precio_viejo,
-.single-producto .precio_unitario {
-     text-align: left;
-}
-
-.single-producto p {
-    font-size: 13px;
-    margin-top: 30px;
-    color: $color-secundario;
-}
-.single-producto .btn {
-    font-size: 14px;
-    padding: 15px;
-    font-weight: 700;
-}
-.single-producto .btn-warning {
-    @include color-caja-texto;
-    border: 0;
-}
-.single-producto .precio_nuevo {
-    font-size: 25px;
-    line-height:35px;
-    margin-top: 20px;
-}
-
-.btn {
-    border-radius: 0;
-    text-align: center;
-    font-size: 13px;
-} 
-.costo-envio {
-@include color-gris-tienda;
-}
-.costo-envio .form-label {
-    font-size: 12px;
-    font-weight: 500;
-    padding-left: 5px;
-   }
-.form-control {
- border-radius: 0;
- font-size: 11px;
-padding: 10px;
-}
+/* FLOTADOR OFERTA EN PRODUCTOS*/
 span.oferta {
     position: absolute;
     top: 11px;
@@ -170,13 +132,60 @@ span.oferta {
     margin-right: 2px;
     font-family: "Poppins", sans-serif;
 }
+/* PRECIO PRODUCTO EN SINGLE */
+.single-producto .precio_nuevo,
+.single-producto .precio_viejo,
+.single-producto .precio_unitario {
+     text-align: left;
+}
+
+.single-producto p {
+    font-size: 13px;
+    margin-top: 30px;
+    color: $color-secundario;
+}
+/* BOTONES PRODUCTOS  EN SINGLE*/
+.single-producto .btn {
+    font-size: 14px;
+    padding: 15px;
+    font-weight: 700;
+}
+.single-producto .btn-warning {
+    @include color-caja-texto;
+    border: 0;
+}
+.single-producto .precio_nuevo {
+    font-size: 25px;
+    line-height:35px;
+    margin-top: 20px;
+}
+/* REGLA GENERAL BOTON */
+.btn {
+    border-radius: 0;
+    text-align: center;
+    font-size: 13px;
+} 
+/* CAJA COSTO DE ENVIO */
+.costo-envio {
+@include color-gris-tienda;
+}
+.costo-envio .form-label {
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 5px;
+   }
+   .costo-envio .form-control {
+    border-radius: 0;
+    font-size: 11px;
+    padding: 10px;
+}
+/* PIE DE PAGINA */
 
 footer {
     @include color-gris-tienda;  
     font-size: 10px;
     padding: 20px;
 }
-
 .footer_logos {
   display: flex;
   align-items: center;
@@ -184,19 +193,188 @@ footer {
   height: auto;
   list-style: none;
 }
-
 .footer_logos li {
   padding: 10px;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
+.copyright {
+    font-size: 11px;
+    font-weight: 500;
+  }
+  /* NEWSLETTER */
 .newsletter {
     padding: 44px;
     background: $color-secundario; 
     color:#fff;
     margin-top: 30px;
 }
-.copyright {
-  font-size: 11px;
-  font-weight: 500;
-}/*# sourceMappingURL=style.css.map */
+ /* BOTON whatsapp */
+.fixed-whatsapp {
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1030;
+}
+.btn-whatsapp i {
+    width: 67px;
+    height: 67px;
+    padding: 10px 8px;
+    color: white;
+    text-align: center;
+    font-size: 44px;
+    vertical-align: middle;
+}
+.btn-whatsapp {
+    z-index: 999;
+    width: 67px;
+    height: 67px;
+    background-color: $color-terciario;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+    border-radius: 50%;
+    border: 0;
+}
+.heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+/**
+ * ----------------------------------------
+ * ANIMACION: latido del corazón
+ * ----------------------------------------
+ */
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+/* BARRA INFO ECOMMERCE - PAGOS - ENVIOS - TIEMPOS */
+.medios-pago-lineal {
+    @include color-gris-tienda;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.medios-pago-lineal .row {
+    padding: 15px 0;
+}
+.medios-pago-lineal span p:first-child {
+    color: $color-texto;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 13px;
+    padding: 9px 0 2px 0;
+    margin: 0;
+    font-weight: 600;
+}
+.medios-pago-lineal span p:last-child {
+    color: $color-terciario;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+}
+.medios-pago-lineal .row > a {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: $color-texto;
+}
+.medios-pago-lineal .row > a:nth-child(2) {
+    border-right: 1px solid $color-terciario;
+    border-left: 1px solid $color-terciario;
+}
+@media (min-width: 992px){
+    .medios-pago-lineal .row  span {
+		display: inline-block;
+        text-align: left;
+        margin-left: 5px;
+    }
+    .medios-pago-lineal .row > a {
+        padding-left: 15px;
+        padding-right: 15px;
+        list-style: none;
+    }
+    .medios-pago-lineal span p:first-child {
+        font-size: 14px;
+        padding: 0;
+    }
+    .medios-pago-lineal span p:last-child {
+        font-size: 11px;
+    }
+    .medios-pago-lineal .row {
+        padding: 25px 0;
+    }
+    .medios-pago-lineal .row span:last-child {
+        position: relative;
+        top: 8px;
+        margin-left: 10px;
+    }  
+}
+/*# sourceMappingURL=style.css.map */
