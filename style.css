@@ -4,6 +4,7 @@
 body {
   font-family: "Poppins", verdana, sans-serif;
   color: #666;
+  font-size: 13px;
 }
 
 /* HEADER */
@@ -23,7 +24,7 @@ header {
 .nav-link, .nav-link li a {
   color: #000;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
@@ -45,7 +46,7 @@ header .carrito a {
 header .form-control {
   border-radius: 0;
   font-size: 12px;
-  min-width: 400px;
+  min-width: 350px;
   padding: 10px;
 }
 
@@ -172,7 +173,7 @@ span.oferta {
 }
 
 .costo-envio .form-label {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
   padding-left: 5px;
 }
@@ -206,16 +207,21 @@ footer {
 }
 
 .copyright {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
 }
 
 /* NEWSLETTER */
 .newsletter {
-  padding: 44px;
   background: #8c7352;
   color: #fff;
+  font-size: 12px;
   margin-top: 30px;
+}
+
+.newsletter .form-control {
+  font-size: 12px;
+  border-radius: 0;
 }
 
 /* BOTON whatsapp */

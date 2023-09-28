@@ -12,46 +12,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    
+    <!-- Encabezado web -->
 <header>
-      <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body" aria-label="MENU">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="img/logo_malbec.png" width="70" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarsExample09">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
-                <li class="nav-item"><a href="producto.html" class="nav-link">Productos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Preguntas frecuentes</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Metodos de pago</a></li>
-                </ul>
-              <form role="search">
-                <input class="form-control" type="Buscar Productos" placeholder="Buscar Productos" aria-label="Buscar Productos">
-              </form>
-              <ul class="carrito">
-              <li>
-              <a href="#"> <i class="fa-solid fa-basket-shopping"></i> </a>
-              </li>
-            </ul>
-            </div>
-          </div>
-        </nav></div>
-      </header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-body" aria-label="MENU">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="img/logo_malbec.png" width="70" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+            <li class="nav-item"><a href="producto.html" class="nav-link">Productos</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link">Preguntas frecuentes</a></li>
+            <li class="nav-item"><a href="metodos-de-pago.html" class="nav-link">Metodos de pago</a></li>
+        </ul>
+        <form role="search">
+          <input class="form-control" type="Buscar Productos" placeholder="Buscar Productos" aria-label="Buscar Productos">
+        </form>
+        <ul class="carrito">
+          <li> <a href="#"> <i class="fa-solid fa-basket-shopping"></i> </a></li>
+        </ul>
+</div>
+</div>
+</nav>
+</div>
+  </header>
+  <!-- FIN Encabezado web -->
+  <!-- mensaje alerta mayoristas-->
       <div class="alert alert-light   rounded-0 order-bottom alert-dismissible fade show" role="alert">
         <div class="container">
 <strong>¿Sos un comercio? </strong> Comunicate con nosotros para conocer los beneficios y precios Mayorista
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>  
     </div>
-
+ <!-- cierre mensaje alerta mayoristas-->
+  <!-- single productos -->
       <div class="container">
         <div class="row">
+           <!-- fotos productos-->
             <div class="col-lg-6 col-md-12">
             <img src="img/vino.png" class="card-img-top border-end" alt="Vino tinto Luigi Bosca De Sangre"> 
             <div class="container">
@@ -77,9 +79,10 @@
                   </div>
                 </div>
               </div>
-            </div>
-            
+            </div>         
         </div>
+         <!-- fotos productos-->
+          <!-- descripcion de producto-->
           <div class="col-lg-6 col-md-12">
             <div class="card single-producto py-5">
                   <h3>Luigi Bosca De Sangre · Malbec Paraje de Altamira
@@ -93,7 +96,8 @@
                 </div>
                 <p>Luigi Bosca De Sangre Malbec Valle de Uco es un tinto de color rojo granate brillante, con aromas a frutas negras y notas especiadas, más ciertos tonos minerales muy atractivos. La entrada en boca es compacta, con nervio y concentración, y una definición limpia, con muy buena fluidez en su paso por el paladar. Taninos finos de textura agradable, gran acidez, firmeza y equilibrio. Final largo y complejo.
                 </p>
-                        <div class="row">
+                   <!-- botones-->
+ <div class="row">
  <div class="d-grid col-lg-6 my-1">
  <a href="producto.html" class="btn btn-dark" type="button"><i class="fa-solid fa-cart-shopping"></i> Agregar a carrito</a>
  </div>
@@ -101,7 +105,9 @@
  <a href="producto.html" class="btn btn-warning" type="button"><i class="fa-brands fa-whatsapp"></i> Consultar</a>
  </div>
  </div> 
-            <div class="col-md-4 costo-envio mt-3 p-3">
+    <!-- cierre botones-->
+       <!-- casillero costo envio-->
+ <div class="col-md-4 costo-envio mt-3 p-3">
   <form>
  <div class="mb-3">
  <label for="zipcode" class="form-label">Consultar costo de envio</label>
@@ -109,57 +115,62 @@
  </div>
  </form>
  </div>
+  <!-- cierre casillero costo envio-->
  </div>
  </div>
-
+   <!-- cierre descripcion de producto-->
         </div>
       </div>
 
-      <div class="container-fluid p-5 newsletter">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-            <h3>Suscríbete a nuestro boletín</h3>
-            <p>Recibe las últimas actualizaciones directamente en tu bandeja de entrada.</p>
-     
-          </div>
-          <div class="col-lg-6 col-md-12">
-          
-            <form action="#" method="post" class="subscribe-form">
-              <div class="input-group mb-3">
-                <input type="email" class="form-control p-4" placeholder="Tu dirección de correo electrónico" aria-label="Tu dirección de correo electrónico" aria-describedby="subscribe-btn">
-                <button class="btn btn-dark" type="button" id="subscribe-btn">Suscribirse</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      
-    <footer class="mt-0">
-      <div class="container">
-     <div class="row">
-                <div class="col-md-6">
-                    <div class="footer_logos">
-                       <li><a href="#"> <img src="img/l-nacion.png" width="100%"></a></li>
-                       <li><a href="#"> <img src="img/l-master.png" width="100%"></a></li>
-                       <li><a href="#"> <img src="img/l-naranja.png" width="100%"></a></li>
-                       <li><a href="#"> <img src="img/l-paypal.png" width="100%"></a></li>
-                       <li><a href="#"> <img src="img/l-visa.png" width="100%"></a></li>
-                       <li><a href="#"> <img src="img/l-nativa.png" width="100%"></a></li>
-                       <li><a href="#"> <img src="img/l-vbancopng.png" width="100%"></a></li>
-                  </div>
-              </div>
-                <div class="col-md-6 copyright">
-                  <p class="pt-2">
-                     © PROYECTO CODERHOUSE (SRL3421) - Venta online desde bodegas -  Idea ecommerce para analizar codigo en practica de cursada - Dirección: Av. cordoba 353 - Bae - Tel: (011) 89898989 -  Lunes a Viernes: 9:30 a 12:30 y de 17 a 20.30 hs.  Sábados: 9:30 a 12:30 hs.
-                  </p>
-                </div>
-            </div>   
+ 
+<!-- Newsletter -->
+<div class="container-fluid p-5 newsletter">
+  <div class="row">
+      <div class="col-lg-6 col-md-12">
+      <h3>Suscríbete a nuestro boletín</h3>
+      <p>Recibe las últimas actualizaciones directamente en tu bandeja de entrada.</p>
+
     </div>
-    <a href="#" target="_blank" class="heartbeat  btn-whatsapp fixed-whatsapp" aria-label="Comunicate por WhatsApp">
-      <i class="fa-brands fa-whatsapp"></i> 
-    </a>
-    </footer>    
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <div class="col-lg-6 col-md-12">
     
-    </html>
+      <form action="#" method="post" class="subscribe-form">
+        <div class="input-group mb-3">
+          <input type="email" class="form-control p-4" placeholder="Tu dirección de correo electrónico" aria-label="Tu dirección de correo electrónico" aria-describedby="subscribe-btn">
+          <button class="btn btn-dark" type="button" id="subscribe-btn">Suscribirse</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- fin Newsletter -->
+<!-- Pie de pagina -->
+<footer class="mt-0">
+<div class="container">
+<div class="row">
+          <div class="col-md-6">
+              <div class="footer_logos">
+                 <li><a href="#"> <img src="img/l-nacion.png" width="100%"></a></li>
+                 <li><a href="#"> <img src="img/l-master.png" width="100%"></a></li>
+                 <li><a href="#"> <img src="img/l-naranja.png" width="100%"></a></li>
+                 <li><a href="#"> <img src="img/l-paypal.png" width="100%"></a></li>
+                 <li><a href="#"> <img src="img/l-visa.png" width="100%"></a></li>
+                 <li><a href="#"> <img src="img/l-nativa.png" width="100%"></a></li>
+                 <li><a href="#"> <img src="img/l-vbancopng.png" width="100%"></a></li>
+            </div>
+        </div>
+          <div class="col-md-6 copyright">
+            <p class="pt-2">
+               © PROYECTO CODERHOUSE (SRL3421) - Venta online desde bodegas - Idea ecommerce para analizar codigo en practica de cursada - Dirección: Av. cordoba 353 - Bae - Tel: (011) 89898989 -  Lunes a Viernes: 9:30 a 12:30 y de 17 a 20.30 hs.  Sábados: 9:30 a 12:30 hs.
+            </p>
+          </div>
+      </div>
+</div>
+<a href="#" target="_blank" class="heartbeat  btn-whatsapp fixed-whatsapp" aria-label="Comunicate por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i> 
+</a>
+</footer>   
+<!-- cierre pie de pagina --> 
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</html>
