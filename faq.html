@@ -8,7 +8,7 @@
         <link rel="icon" type="image/jpg" href="favicon.png"/>
         <meta name="description" content="Comprá los mejores vinos tintos directo desde Bodegas Malbec. Ofertas en nuestra tienda online. Envíos a todo el país.">
     <meta name="keywords" content="vinos, bodegas, vinos mayorista, vinos patagonicos, venta online de vinos, malbec">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     </head>
@@ -44,10 +44,184 @@
 </div>
 </header>
 <!-- FIN Encabezado web -->
+<!-- breadcrumb-->
+<div class="bg-light shadow-sm mb-5">
+  <div class="container p-3">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Preguntas Frecuentes</li>
+  </ol>
+</nav></div></div>
+<!-- FIN breadcrumb -->
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, quo neque vel possimus quod quae modi, porro aliquid quos ratione eius maiores ipsum, aliquam corporis numquam ex? Accusamus, consequuntur? Praesentium!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsam deserunt magnam cumque doloremque quas perferendis, assumenda pariatur ratione autem odio, obcaecati, facilis rerum provident? Fugit aut enim magni suscipit!
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+          <h2 class="titulos">Preguntas Frecuentes</h2>
+           <!-- Pestañas -->
+           <ul class="nav nav-tabs mt-4" id="faqTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="tab1" data-bs-toggle="tab" href="#content1" role="tab" aria-controls="content1" aria-selected="true">Generales</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="tab2" data-bs-toggle="tab" href="#content2" role="tab" aria-controls="content2" aria-selected="false">Mi Cuenta</a>
+            </li>
+        </ul>    
 
+          <div class="tab-content" id="faqTabContent">
+              <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                  <p> <!-- Acordeones -->
+                    <div class="accordion" id="faqAccordion">
+                        <!-- Pregunta 1 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                    ¿Cuál es el proceso de elaboración de nuestros vinos?
+                                </button>
+                            </h3>
+                            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    El proceso de elaboración de nuestros vinos es cuidadosamente supervisado por nuestros enólogos y comienza con la selección de las mejores uvas. Luego, las uvas se fermentan y envejecen en barricas de roble antes de ser embotelladas. Estamos comprometidos con la calidad en cada etapa del proceso.
+                                </div>
+                            </div>
+                        </div>
+          
+                        <!-- Pregunta 2 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                    ¿Dónde puedo comprar sus vinos?
+                                </button>
+                            </h3>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Nuestros vinos están disponibles en tiendas especializadas y restaurantes selectos. También puedes comprar directamente en nuestro sitio web.
+                                </div>
+                            </div>
+                        </div>
+          
+                        <!-- Pregunta 3 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                    ¿Ofrecen envío a domicilio?
+                                </button>
+                            </h3>
+                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, ofrecemos envío a domicilio. Puedes seleccionar esta opción al realizar tu compra en línea. Consulta nuestros tiempos de entrega y costos de envío en la sección de envíos de nuestro sitio web.
+                                </div>
+                            </div>
+                        </div>
+                                      <!-- Pregunta 4 -->
+                                      <div class="accordion-item">
+                                        <h3 class="accordion-header" id="faqHeading4">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                              ¿En qué horario puedo comprar?
+                                            </button>
+                                        </h3>
+                                        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                              Si querés tus bebidas frías y en 45’ podés comprarlas de 12 a 23.30 hs., los pedidos programados (de experiencias y suscripción) están disponibles para vos las 24hs.                                  </div>
+                                        </div>
+                                    </div>
+                                      <!-- Pregunta 5 -->
+                                      <div class="accordion-item">
+                                        <h3 class="accordion-header" id="faqHeading5">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                              ¿Cómo compro?
+                                            </button>
+                                        </h3>
+                                        <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">                                            
+                                              ¡Es muy fácil!
+<p> Paso 1: Ingresa tu dirección de entrega para verificar cobertura y disponibilidad de productos.</p>
+  <p> Paso 2: Elegí tus productos favoritos y agregalos al carrito.</p>
+    <p>Paso 3: Confirmá tu carrito.</p>
+      <p>Paso 4: Ingresa tus datos y método de pago elegido.</p>
+        <p>Paso 5: Verificá tus datos de entrega y finalizá tu compra.</p>
+          <p> ¡Listo! Ya estás disfrutando de la magia!</p>
+            <p> * si estás comprando en suscripción tenés que elegir la frecuencia y el día de la semana en que queres recibir tus bebidas. </p>
+           </div>
+                                        </div>
+                                    </div>
+                    </div></p>
+              </div>
+              <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
+                  <p> <div class="accordion" id="faqAccordion">
+                    <!-- Pregunta 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                ¿Cómo cambio los datos de mi perfil?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Para cambiar los detalles de tu cuenta, simplemente haz clic en "Mi perfil" y luego en el icono <strong>Editar</strong>. Los únicos datos que podrás cambiar son el número de teléfono.
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Pregunta 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                ¿Cómo elimino mi cuenta?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>¡Lamentamos que te quieras ir! Para eliminar tu cuenta, comunícate con nuestro equipo de atención al cliente por correo electrónico, nuestra dirección es <a href="mailto:info@malbec.com.ar">info@malbec.com.ar</a></p>
+                                <p>También puedes comunicarte con nosotros a través de nuestro <strong>chat en línea</strong> en <strong>Web</strong> o en nuestra <strong>App</strong> ingresando a <strong>tu perfil</strong> arriba a la izquierda y luego > <strong>Chat Online</strong></p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Pregunta 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                ¿Cómo dejo de recibir notificaciones de MALBEC SHOP?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>¡¿Estás seguro?! Podemos enviar promociones y descuentos exclusivos, pero si estás decidido a no recibir más nuestros mensajes, fíjate qué opción es la que te sirve:</p>
+                                <p><u>No quiero recibir más SMS</u>: no te preocupes, mándanos un mail a <a href="mailto:contacto@malbec.com.ar">contacto@malbec.com.ar</a> y lo gestionamos.</p>
+                                <p><u>No quiero recibir más mails</u>: abre el último correo que te enviamos y haz clic en el enlace para cancelar la suscripción en la parte inferior.</p>
+                                <p><u>No quiero recibir más notificaciones</u>: Deberás ingresar a la configuración de tu celular y apagar las notificaciones de la aplicación MALBEC SHOP.</p>
+                                <p><small><i>* Los correos electrónicos de confirmación del pedido, cancelación, etc se enviarán normalmente.</i></small></p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Pregunta 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                No puedo acceder a mi cuenta
+                            </button>
+                        </h2>
+                        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Esto puede suceder por algunas razones. Chequea lo siguiente:</p>
+                                <ul>
+                                    <li>Falta de confirmación de datos: Una vez que completaste el registro, debes <strong>confirmar tu teléfono</strong>. Después de hacer clic en "Confirmar teléfono", te enviaremos un SMS con un código que debes ingresar en la aplicación. El envío de SMS puede demorar hasta 1 minuto. Si no lo recibiste, simplemente haz clic en "Enviar nuevamente".</li>
+                                    <li>Introducción de contraseña incorrecta: La contraseña debe tener al menos 8 caracteres, incluidos números y letras. Si perdiste o no recuerdas tu contraseña, simplemente haz clic en “¿Olvidaste tu contraseña?" e ingresa tu correo electrónico de registro para enviarte una nueva contraseña. Si te registraste con Facebook o Apple ID, debes ingresar el correo correspondiente a esas aplicaciones.</li>
+                                    <li>Registro a través de Facebook o Apple ID: Si intentaste iniciar sesión con tu correo electrónico y contraseña y la aplicación te informa que no se ha encontrado tu usuario, es posible que debas iniciar sesión a través de Facebook o Apple ID. Para iniciar sesión, simplemente haz clic en "Continuar con Facebook" o "Continuar con Apple ID" en la pantalla de inicio.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div></p>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</div>
 
 
 <!-- Newsletter -->
@@ -98,6 +272,5 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsam deserunt m
 </footer>   
 <!-- cierre pie de pagina --> 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+<script src="bootstrap/js/bootstrap.bundle.js"></script>
 </html>

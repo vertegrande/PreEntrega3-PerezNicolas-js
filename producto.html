@@ -7,8 +7,8 @@
     <link rel="icon" type="image/jpg" href="favicon.png"/>
     <meta name="description" content="Comprá los mejores vinos tintos directo desde Bodegas Malbec. Ofertas en nuestra tienda online. Envíos a todo el país.">
     <meta name="keywords" content="vinos, bodegas, vinos mayorista, vinos patagonicos, venta online de vinos, malbec">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
@@ -42,6 +42,17 @@
 </div>
   </header>
   <!-- FIN Encabezado web -->
+  <!-- breadcrumb-->
+<div class="bg-light shadow-sm">
+  <div class="container p-3">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="#">Productos</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Luigi Bosca De Sangre · Malbec Paraje de Altamira</li>
+  </ol>
+</nav></div></div>
+<!-- FIN breadcrumb -->
   <!-- mensaje alerta mayoristas-->
       <div class="alert alert-light   rounded-0 order-bottom alert-dismissible fade show" role="alert">
         <div class="container">
@@ -51,7 +62,7 @@
     </div>
  <!-- cierre mensaje alerta mayoristas-->
   <!-- single productos -->
-      <div class="container">
+      <div class="container mt-2">
         <div class="row">
            <!-- fotos productos-->
             <div class="col-lg-6 col-md-12">
@@ -59,22 +70,22 @@
             <div class="container">
               <div class="row gallery">
                 <div class="col-3">
-                  <div class="shadow m-1">
+                  <div class="shadow-sm m-1">
                     <img src="img/famiglia.jpg" class="card-img-top" alt="Vino tinto Luigi Bosca De Sangre">
                   </div>
                 </div>
                 <div class="col-3">
-                  <div class="shadow m-1">
+                  <div class="shadow-sm m-1">
                     <img src="img/losprimos.jpg" class="card-img-top" alt="Vino tinto Luigi Bosca De Sangre">
                   </div>
                 </div>
                 <div class="col-3">
-                  <div class="shadow m-1">
+                  <div class="shadow-sm m-1">
                     <img src="img/famiglia.jpg" class="card-img-top" alt="Vino tinto Luigi Bosca De Sangre">
                   </div>
                 </div>
                 <div class="col-3">
-                  <div class="shadow m-1">
+                  <div class="shadow-sm m-1">
                     <img src="img/losprimos.jpg" class="card-img-top" alt="Vino tinto Luigi Bosca De Sangre">
                   </div>
                 </div>
@@ -171,6 +182,5 @@
 </footer>   
 <!-- cierre pie de pagina --> 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+<script src="bootstrap/js/bootstrap.bundle.js"></script>
 </html>
