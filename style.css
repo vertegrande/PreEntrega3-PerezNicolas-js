@@ -28,7 +28,7 @@ header {
   text-transform: uppercase;
 }
 
-.navbar-nav li:nth-child(3n) a {
+.navbar-nav li:nth-child(4n) a {
   color: #fff !important;
   background: #8c7352;
   padding: 8px 15px;
@@ -46,8 +46,8 @@ header .carrito a {
 header .form-control {
   border-radius: 0;
   font-size: 12px;
-  min-width: 350px;
   padding: 10px;
+  width: 100%;
 }
 
 /* PRODUCTOS EN HOME */
@@ -148,8 +148,9 @@ span.oferta {
 }
 
 .single-producto .btn-warning {
-  background-color: #8c7352;
   color: #ffffff;
+  background-color: #8c7352;
+  background-image: linear-gradient(62deg, #8c7352 0%, #b3ada1 100%);
   border: 0;
 }
 
@@ -213,7 +214,9 @@ footer {
 
 /* NEWSLETTER */
 .newsletter {
-  background: #8c7352;
+  color: #ffffff;
+  background-color: #8c7352;
+  background-image: linear-gradient(62deg, #8c7352 0%, #b3ada1 100%);
   color: #fff;
   font-size: 12px;
   margin-top: 30px;
@@ -393,20 +396,11 @@ footer {
 /* Preguntas frecuentes */
 .pagos .borde-caja {
   padding: 27px;
-  border: 3px solid #8c7352;
 }
 
 .pagos h3 {
   font-size: 1.3rem;
   color: #000;
-}
-
-.pagos a {
-  background-color: #cc8832;
-  color: #ececec;
-  text-decoration: none;
-  padding: 2px 9px;
-  margin-top: 10px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -465,6 +459,37 @@ footer {
     width: 100%;
     padding: 30px 15px;
     float: left;
+  }
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Animacion 2 - rotar
+/*-----------------------------------------------------------------------------------*/
+.rotar {
+  animation-delay: 5s;
+  animation: flip_left 7.6s steps(60, start) infinite forwards;
+}
+
+@keyframes flip_left {
+  0% {
+    transform: perspective(1000px) rotateY(90deg) skewY(-1deg);
+  }
+  5% {
+    transform: perspective(1000px) rotateY(-90deg) skewY(-1deg);
+  }
+  10% {
+    transform: perspective(1000px) rotateY(90deg) skewY(-1deg);
+  }
+  15% {
+    transform: perspective(1000px) rotateY(-75deg) skewY(-1.8deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateY(20deg) skewY(0.8deg);
+  }
+  35% {
+    transform: perspective(1000px) rotateY(-25deg) skewY(-0.8deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(0);
   }
 }
 /*# sourceMappingURL=style.css.map */
