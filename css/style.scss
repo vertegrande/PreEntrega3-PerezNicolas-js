@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+@import "fontawesome/css/all.css";
 /* Base mixins, variables proyecto */
 $color-primario: #ececec;
-$color-secundario: #8c7352;
-$color-terciario: #cc8832;
+$color-secundario: #e8113a;
+$color-terciario: #d4b43d;
 $color-texto: #666;
 $tipografia-general:"Poppins", verdana, sans-serif;
 
@@ -10,55 +11,69 @@ $tipografia-general:"Poppins", verdana, sans-serif;
     background-color: #ececec;
     color: #333333;
   }
+  @mixin color-rojo-tienda {
+    background-color: #e8113a;
+    color: #fff;
+  }
 @mixin color-caja-texto {
     color: #ffffff;
-    background-color: #8c7352;
-background-image: linear-gradient(62deg, #8c7352 0%, #b3ada1 100%);
-
+    background-color: #e8113a; 
   }
   body {
     font-family: $tipografia-general;
     color: $color-texto;
     font-size: 13px;
 }
-  
+.rojo-texto{
+  color: #e8113a;
+}
 /* HEADER */
 header {
   @include color-gris-tienda;
   
 }
+.nav-link {
+  font-weight: 700;
+  color:#222 !important;
+}
 .bg-body {
   background: $color-primario !important;
+}header .form-inputs{
+  position:relative;
 }
-.navbar-nav {
-    display: flex;
-  }  
-.nav-link, .nav-link li a {
-  color: #000;
-  font-weight: 600;
-  font-size: 12px;
-  text-transform: uppercase;
+header .form-inputs .form-control{
+  height:45px; 
 }
 
-.navbar-nav li:nth-child(4n) a {
-  color: #fff !important;
-  background: $color-secundario;
-  padding: 8px 15px;
+header .form-inputs .form-control:focus{
+  box-shadow:none;
+  border:1px solid #eee;
 }
 
-header .carrito {
-  list-style: none;
-  padding: 25px 5px 10px 17px;
+header .form-inputs i{
+  position:absolute;
+  right:10px;
+  top:15px;
 }
 
-header .carrito a {
-  color: $color-secundario;
+header .shop-bag{
+  background-color:#e8113a;
+  color:#fff;
+  height:50px;
+  width:50px;
+  font-size:25px;
+  display:flex;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
 }
-header .form-control {
-    border-radius: 0;
-    font-size: 12px;
-    padding: 10px;
-    width: 100%;
+header .link-bag  {
+  text-decoration: none;
+  
+}
+
+header .qty{
+  font-size:12px;
 }
 /* PRODUCTOS EN HOME */
 .card {
@@ -71,6 +86,8 @@ header .form-control {
   line-height: 17px;
   margin-bottom: 15px;
   padding: 10px;
+  font-weight: 700;
+  color:#000;
   text-align: center;
 }
 /* PRECIOS PRODUCTOS */
@@ -88,7 +105,7 @@ header .form-control {
   line-height: 1.1875rem;
   font-weight: 700;
   width: 100%;
-  color:$color-terciario;
+  color:$color-secundario;
   text-align: center;
 }
 
@@ -98,11 +115,12 @@ header .form-control {
   line-height: 1rem;
 }
 
-.precio_unitario {
-  font-size: 0.75rem;
-  font-family: $tipografia-general;
+.precio_descripcion {
+  font-size: 0.65rem;
+  font-family: "Poppins", verdana, sans-serif;
   line-height: 0.75rem;
   width: 100%;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -111,28 +129,7 @@ header .form-control {
      font-family: $tipografia-general;
      line-height: 0;
 }
-/* FLOTADOR OFERTA EN PRODUCTOS*/
-span.oferta {
-    position: absolute;
-    top: 11px;
-    right: 3px;
-    height: 65px;
-    text-align: center;
-    width: 65px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    display: inline-block;
-    text-transform: uppercase;
-    font-style: italic;
-    background: #3d3c54;
-    color: #FFFFFF;
-    padding: 18px 0px 0px 1px;
-    font-weight: 500;
-    line-height: 16px;
-    font-size: 18px;
-    margin-right: 2px;
-    font-family: "Poppins", sans-serif;
-}
+
 /* PRECIO PRODUCTO EN SINGLE */
 .single-producto .precio_nuevo,
 .single-producto .precio_viejo,
@@ -213,33 +210,7 @@ footer {
   font-size: 12px;
   border-radius: 0;
   
-}
- /* BOTON whatsapp */
-.fixed-whatsapp {
-    position: fixed;
-    right: 0;
-    bottom: 80px;
-    right: 20px;
-    z-index: 1030;
-}
-.btn-whatsapp i {
-    width: 67px;
-    height: 67px;
-    padding: 10px 8px;
-    color: white;
-    text-align: center;
-    font-size: 44px;
-    vertical-align: middle;
-}
-.btn-whatsapp {
-    z-index: 999;
-    width: 67px;
-    height: 67px;
-    background-color: $color-terciario;
-    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
-    border-radius: 50%;
-    border: 0;
-}
+} 
 .heartbeat {
 	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	        animation: heartbeat 1.5s ease-in-out infinite both;
@@ -319,7 +290,7 @@ footer {
 }
 /* BARRA INFO ECOMMERCE - PAGOS - ENVIOS - TIEMPOS */
 .medios-pago-lineal {
-    @include color-gris-tienda;
+    @include color-rojo-tienda;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -327,7 +298,7 @@ footer {
     padding: 15px 0;
 }
 .medios-pago-lineal span p:first-child {
-    color: $color-texto;
+    color: $color-terciario ;
     font-size: 10px;
     text-transform: uppercase;
     line-height: 13px;
@@ -336,10 +307,10 @@ footer {
     font-weight: 600;
 }
 .medios-pago-lineal span p:last-child {
-    color: $color-terciario;
+    color: $color-primario ;
     font-size: 8px;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
 }
 .medios-pago-lineal .row > a {
@@ -349,8 +320,8 @@ footer {
     color: $color-texto;
 }
 .medios-pago-lineal .row > a:nth-child(2) {
-    border-right: 1px solid $color-terciario;
-    border-left: 1px solid $color-terciario;
+    border-right: 1px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1;
 }
 @media (min-width: 992px){
     .medios-pago-lineal .row  span {
@@ -369,6 +340,7 @@ footer {
     }
     .medios-pago-lineal span p:last-child {
         font-size: 11px;
+        font-weight: 600;
     }
     .medios-pago-lineal .row {
         padding: 25px 0;
@@ -392,35 +364,7 @@ footer {
 color: $color-terciario;
 }
 
-/* Preguntas frecuentes */
 
-.titulos {
-  color:#000;
-    font-weight: 600;
-    margin-bottom: 60px;
-  }
-.accordion-button {
-  font-weight: 600;
-}
-.nav-tabs .nav-link {
-color:$color-secundario;
-  font-size: 19px;
-}
-.accordion-button:not(.collapsed) {
-  color: #8d7356;
-  background-color: #ffebd554;
-  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 #f1dfd0;
-}
-
-/* Preguntas frecuentes */
-
-.pagos .borde-caja {
- padding:27px;
-  }
-  .pagos h3 {
-    font-size: 1.3rem;
-    color: #000;
-}
 
 /*-----------------------------------------------------------------------------------*/
 /*	Nosotros
