@@ -16,12 +16,14 @@ function agregarAlCarrito(nombre, valor) {
   actualizarListaCarrito();
   mostrarModal();
   guardarCarritoEnLocalStorage();
+  actualizarTotales(); // Actualizar totales al agregar un producto al carrito
 }
 
 function eliminarDelCarrito(index) {
   carrito.splice(index, 1);
   actualizarListaCarrito();
   guardarCarritoEnLocalStorage();
+  actualizarTotales(); // Actualizar totales al eliminar un producto del carrito
 }
 
 function guardarCarritoEnLocalStorage() {
